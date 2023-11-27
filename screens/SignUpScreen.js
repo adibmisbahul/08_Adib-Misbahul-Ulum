@@ -37,13 +37,13 @@ export default function SignUpScreen() {
           <Text className="text-gray-700 ml-4">Full Name</Text>
           <TextInput
             className="p-4 bg-gray-100 text-gray-700 rounded-2xl mb-3"
-            value="john snow"
+            value="Adib Misbahul Ulum"
             placeholder="Enter Name"
           />
           <Text className="text-gray-700 ml-4">Email Address</Text>
           <TextInput
             className="p-4 bg-gray-100 text-gray-700 rounded-2xl mb-3"
-            value="john@gmail.com"
+            value="adib@gmail.com"
             placeholder="Enter Email"
           />
           <Text className="text-gray-700 ml-4">Password</Text>
@@ -53,7 +53,8 @@ export default function SignUpScreen() {
             value="test12345"
             placeholder="Enter Password"
           />
-          <TouchableOpacity className="py-3 bg-yellow-400 rounded-xl">
+          <TouchableOpacity className="py-3 bg-yellow-400 rounded-xl"
+           onPress={() => navigation.navigate("Dashboard")}>
             <Text className="font-xl font-bold text-center text-gray-700">
               Sign Up
             </Text>

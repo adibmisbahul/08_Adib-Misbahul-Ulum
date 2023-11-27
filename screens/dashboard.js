@@ -9,7 +9,7 @@ import {
 import Navbar from "../component/navbar";
 import Animation12 from "../assets/images/extra.png";
 import BckImage from "../assets/images/backimage.jpeg";
-import BckImage2 from "../assets/images/back123.jpeg";
+import BckImage2 from "../assets/images/back90.jpeg";
 import Mapelimage from "../assets/images/mapel.png"; 
 import Aktiv from "../assets/images/aktive.png"
 
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   wrapeskul: {
     width: 100,
-    height: 50,
+    height: 40,
     borderRadius: 5,
     marginTop: 50,
     backgroundColor: "#1c3141",

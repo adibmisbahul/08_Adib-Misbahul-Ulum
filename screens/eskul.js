@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import React from "react";
 
-import BckImage from "../assets/images/back123.jpeg";
+import BckImage from "../assets/images/back90.jpeg";
 import Navbar from "../component/navbar";
 import { useNavigation } from "@react-navigation/native";
 
@@ -17,12 +17,12 @@ export default function Eskulpage() {
 
   const [text, onChangeText] = React.useState("masukan nis");
   const [text2, onChangeText2] = React.useState("pilih eskul");
+  const [text3, onChangeText3] = React.useState("Kelas");
 
   const Eskul = [
     { eskul: "Basket" },
     { eskul: "Web tech" },
     { eskul: "Cyber Security" },
-    { eskul: "Futsal" },
   ];
 
   return (
@@ -45,11 +45,24 @@ export default function Eskulpage() {
               value={text2}
               onChangeText={onChangeText2}
             />
+            <TextInput
+              style={styles.input}
+              value={text3}
+              onChangeText={onChangeText3}
+            />
             <TouchableOpacity onPress={() => navigation.navigate("Dashboard")}>
               <Text style={styles.daftar2}>Daftar</Text>
             </TouchableOpacity>
           </View>
         </View>
+        <View></View>
+        {Eskul.map((post) => {
+          return (
+            <View style={styles.poeskul}>
+              <Text className="text-white text-center mt-3">{post.eskul}</Text>
+            </View>
+          );
+        })}
       </ImageBackground>
     </>
   );
@@ -98,5 +111,13 @@ const styles = StyleSheet.create({
     marginLeft: 130,
     paddingTop: 5,
     marginTop: 20,
+  },
+  poeskul: {
+    width: 330,
+    height: 50,
+    marginTop: 30,
+    marginLeft: 15,
+    borderRadius: 5,
+    backgroundColor: "#1c3141",
   },
 });
