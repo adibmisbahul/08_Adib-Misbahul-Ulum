@@ -4,25 +4,45 @@ import {
   View,
   Image,
   TouchableOpacity,
-  TextInput,
+  ImageBackground,
 } from "react-native";
-
 import Navbar from "../component/navbar";
 import Animation12 from "../assets/images/extra.png";
+import BckImage from "../assets/images/backimage.jpeg";
+import Mapelimage from "../assets/images/mapel.png"; 
+import Aktiv from "../assets/images/aktive.png"
 
 const Home = ({ navigation }) => {
+  const dataSiswa = [
+	{ gambar: (Animation12), text: "Daftar Eskul" },
+	{ gambar: (Mapelimage), text: "Mapel" },
+	{ gambar: (Aktiv), text: "Kegiatan " },
+];
+
   return (
     <>
       <Navbar />
-      <View style={styles.wraphalo}>
-        <Text style={styles.halo}>Halo,</Text>
-        <Text style={styles.Welcome}>Student Smk Telkom</Text>
-      </View>
-      <View style={styles.containerextra}>
-        <Image source={Animation12} style={styles.animation1} />
-        <TouchableOpacity style={styles.wrapeskul}>
-          <Text style={styles.eskul}>Daftar eskul</Text>
-        </TouchableOpacity>
+      <View className="flex-1">
+        <ImageBackground source={BckImage} style={styles.bck1}>
+          <View style={styles.wraphalo}>
+            <Text style={styles.halo}>Halo,</Text>
+            <Text style={styles.Welcome}>Student Smk Telkom</Text>
+          </View>
+
+          {dataSiswa.map((post) => {
+            return(
+            <View style={styles.containerextra}>
+              <Image source={post.gambar} style={styles.animation1} />
+              <TouchableOpacity
+                style={styles.wrapeskul}
+                onPress={() => navigation.navigate("eskul")}
+              >
+                <Text style={styles.eskul}>{post.text}</Text>
+              </TouchableOpacity>
+            </View>
+			)
+          })}
+        </ImageBackground>
       </View>
     </>
   );
@@ -39,11 +59,13 @@ const styles = StyleSheet.create({
   halo: {
     fontSize: 40,
     fontWeight: "bold",
+    color: "white",
   },
 
   Welcome: {
     fontSize: 20,
     fontWeight: "bold",
+    color: "white",
   },
 
   containerextra: {
@@ -66,17 +88,22 @@ const styles = StyleSheet.create({
     height: 140,
     resizeMode: "stretch",
   },
-  wrapeskul:{
-	width:100, 
-	height:50,
-	borderRadius:5,
-	marginTop: 50,
-	backgroundColor: "#2B2A4C",
+  wrapeskul: {
+    width: 100,
+    height: 50,
+    borderRadius: 5,
+    marginTop: 50,
+    backgroundColor: "#2B2A4C",
   },
 
   eskul: {
-	textAlign: "center",
-	marginTop: 12,
+    textAlign: "center",
+    marginTop: 12,
     color: "white",
+  },
+
+  bck1: {
+    flex: 1,
+    resizeMode: "cover",
   },
 });

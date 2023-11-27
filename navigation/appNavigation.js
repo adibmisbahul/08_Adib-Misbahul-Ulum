@@ -7,6 +7,7 @@ import WelcomeScreen from '../screens/WelcomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import Dashboard from '../screens/dashboard';
+import Eskulpage from '../screens/eskul';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ export default function AppNavigation() {
         <Stack.Screen name="Login" options={{headerShown: false}} component={LoginScreen} />
         <Stack.Screen name="SignUp" options={{headerShown: false}} component={SignUpScreen} />
         <Stack.Screen name="Dashboard" options={{headerShown: false}} component={Dashboard} />
+        <Stack.Screen name="eskul" options={{headerShown: false}} component={Eskulpage} />
       </Stack.Navigator>
     </NavigationContainer>
   )
