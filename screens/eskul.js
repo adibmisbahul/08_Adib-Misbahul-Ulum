@@ -8,30 +8,29 @@ import {
 } from "react-native";
 import React from "react";
 
-import BckImage from "../assets/images/backimage.jpeg";
+import BckImage from "../assets/images/back123.jpeg";
 import Navbar from "../component/navbar";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Eskulpage() {
-
-	const navigation = useNavigation();
+  const navigation = useNavigation();
 
   const [text, onChangeText] = React.useState("masukan nis");
-  const [text2, onChangeText2] = React.useState("pilih eskul",);
+  const [text2, onChangeText2] = React.useState("pilih eskul");
 
   const Eskul = [
-	{eskul: 'Basket'},
-	{eskul: 'Web tech'},
-	{eskul: 'Cyber Security'},
-	{eskul: 'Futsal'},
-  ]
+    { eskul: "Basket" },
+    { eskul: "Web tech" },
+    { eskul: "Cyber Security" },
+    { eskul: "Futsal" },
+  ];
 
   return (
     <>
       <Navbar />
       <ImageBackground source={BckImage} style={styles.bck1}>
         <View style={styles.wraphalo}>
-          <Text style={styles.halo}>Halo,</Text>
+          <Text style={styles.halo}>Pilih Eskul,</Text>
           <Text style={styles.Welcome}>Kembangkan bakat anda</Text>
         </View>
         <View className="flex justify-center">
@@ -46,12 +45,8 @@ export default function Eskulpage() {
               value={text2}
               onChangeText={onChangeText2}
             />
-            <TouchableOpacity
-			onPress={() => navigation.navigate("Dashboard")}
-			>
-              <Text style={styles.daftar2}>
-                Daftar
-              </Text>
+            <TouchableOpacity onPress={() => navigation.navigate("Dashboard")}>
+              <Text style={styles.daftar2}>Daftar</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -90,18 +85,18 @@ const styles = StyleSheet.create({
     padding: 10,
     borderColor: "white",
     color: "white",
-	marginTop:30
+    marginTop: 30,
   },
 
-  daftar2:{
-	color: 'white',
-	backgroundColor: "purple", 
-	width:100, 
-	height:30,
-	textAlign: 'center',
-	borderRadius: 5, 
-	marginLeft: 130, 
-	paddingTop:5, 
-	marginTop:20
-  }
+  daftar2: {
+    color: "white",
+    backgroundColor: "purple",
+    width: 100,
+    height: 30,
+    textAlign: "center",
+    borderRadius: 5,
+    marginLeft: 130,
+    paddingTop: 5,
+    marginTop: 20,
+  },
 });

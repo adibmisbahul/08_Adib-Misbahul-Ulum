@@ -17,8 +17,8 @@ export default function WelcomeScreen() {
         </Text>
         <View className="flex-row justify-center">
           <Image
-            source={require("../assets/images/welcome.png")}
-            style={{ width: 350, height: 350 }}
+            source={require("../assets/images/kunci.png")}
+            style={{ width: 350, height: 350 , marginLeft:55}}
           />
         </View>
         <View className="space-y-4">

@@ -9,6 +9,7 @@ import {
 import Navbar from "../component/navbar";
 import Animation12 from "../assets/images/extra.png";
 import BckImage from "../assets/images/backimage.jpeg";
+import BckImage2 from "../assets/images/back123.jpeg";
 import Mapelimage from "../assets/images/mapel.png"; 
 import Aktiv from "../assets/images/aktive.png"
 
@@ -23,7 +24,7 @@ const Home = ({ navigation }) => {
     <>
       <Navbar />
       <View className="flex-1">
-        <ImageBackground source={BckImage} style={styles.bck1}>
+        <ImageBackground source={BckImage2} style={styles.bck1}>
           <View style={styles.wraphalo}>
             <Text style={styles.halo}>Halo,</Text>
             <Text style={styles.Welcome}>Student Smk Telkom</Text>
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 5,
     marginTop: 50,
-    backgroundColor: "#2B2A4C",
+    backgroundColor: "#1c3141",
   },
 
   eskul: {

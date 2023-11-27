@@ -16,14 +16,14 @@ export default function LoginScreen() {
         <View className="flex-row justify-start">
           <TouchableOpacity
             onPress={() => navigation.goBack()}
-            className="bg-yellow-400 p-2 rounded-tr-2xl rounded-bl-2xl ml-4"
+            className=" p-2 rounded-tr-2xl rounded-bl-2xl ml-4 bg-yellow-400"
           >
             <ArrowLeftIcon size="20" color="black" />
           </TouchableOpacity>
         </View>
         <View className="flex-row justify-center">
           <Image
-            source={require("../assets/images/login.png")}
+            source={require("../assets/images/popoi.png")}
             style={{ width: 200, height: 200 }}
           />
         </View>
@@ -37,7 +37,7 @@ export default function LoginScreen() {
           <TextInput
             className="p-4 bg-gray-100 text-gray-700 rounded-2xl mb-3"
             placeholder="email"
-            value="john@gmail.com"
+            value="Adib@gmail.com"
           />
           <Text className="text-gray-700 ml-4">Password</Text>
           <TextInput

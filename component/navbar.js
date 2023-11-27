@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     width: 360,
     height: 60,
     flexDirection: "row",
-    backgroundColor: "#2B2A4C",
+    backgroundColor: "#1c3141",
   },
 
   avatar12: {
