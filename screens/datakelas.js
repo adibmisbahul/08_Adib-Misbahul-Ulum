@@ -16,6 +16,7 @@ export default function Datakelas() {
   const navigation = useNavigation();
 
   const Datasiswa = [
+    
     { nama: "Adib", kelas: "XII RPL 1", Nis: "4312876" },
     { nama: "Riza", kelas: "XII RPL 1", Nis: "4312876" },
     { nama: "Andre", kelas: "XII RPL 1", Nis: "4312876" },
@@ -35,8 +36,8 @@ export default function Datakelas() {
         <ImageBackground source={BckImage2} style={styles.bck1}>
           <View style={styles.container}>
             <DataTable>
-              <DataTable.Header style={styles.head}>
-                <DataTable.Title>Name</DataTable.Title>
+              <DataTable.Header style={styles.head} >
+                <DataTable.Title >Name</DataTable.Title>
                 <DataTable.Title>Kelas</DataTable.Title>
                 <DataTable.Title numeric>Nis</DataTable.Title>
               </DataTable.Header>
@@ -77,6 +78,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
 
-  head: { height: 44, backgroundColor: "lavender" },
-  row: { height: 40, backgroundColor: "lightyellow" },
+  head: { height: 44, backgroundColor: "yellow" },
+  row: { height: 40, backgroundColor: "white" },
 });

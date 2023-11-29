@@ -7,7 +7,7 @@ import WelcomeScreen from '../screens/WelcomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import Dashboard from '../screens/dashboard';
-import Eskulpage from '../screens/eskul';
+import Eskulpage from '../screens/siswa';
 import Datakelas from '../screens/datakelas';
 
 const Stack = createNativeStackNavigator();
