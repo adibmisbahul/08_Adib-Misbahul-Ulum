@@ -15,14 +15,14 @@ import { useNavigation } from "@react-navigation/native";
 export default function Eskulpage() {
   const navigation = useNavigation();
 
-  const [text, onChangeText] = React.useState("masukan nis");
-  const [text2, onChangeText2] = React.useState("pilih eskul");
+  const [text, onChangeText] = React.useState("masukan nama");
+  const [text2, onChangeText2] = React.useState("masukan nis");
   const [text3, onChangeText3] = React.useState("Kelas");
 
   const Eskul = [
-    { eskul: "Basket" },
-    { eskul: "Web tech" },
-    { eskul: "Cyber Security" },
+    { eskul: "Data Kelas" },
+    { eskul: "Data Eskul" },
+    { eskul: "List" },
   ];
 
   return (
@@ -30,8 +30,8 @@ export default function Eskulpage() {
       <Navbar />
       <ImageBackground source={BckImage} style={styles.bck1}>
         <View style={styles.wraphalo}>
-          <Text style={styles.halo}>Pilih Eskul,</Text>
-          <Text style={styles.Welcome}>Kembangkan bakat anda</Text>
+          <Text style={styles.halo}>Data Siswa,</Text>
+          <Text style={styles.Welcome}>Lihat Berbagai data</Text>
         </View>
         <View className="flex justify-center">
           <View>
@@ -59,7 +59,11 @@ export default function Eskulpage() {
         {Eskul.map((post) => {
           return (
             <View style={styles.poeskul}>
+              <TouchableOpacity
+              onPress={() => navigation.navigate("datakelas")}
+              >
               <Text className="text-white text-center mt-3">{post.eskul}</Text>
+              </TouchableOpacity>
             </View>
           );
         })}

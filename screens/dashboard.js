@@ -8,17 +8,16 @@ import {
 } from "react-native";
 import Navbar from "../component/navbar";
 import Animation12 from "../assets/images/extra.png";
-import BckImage from "../assets/images/backimage.jpeg";
 import BckImage2 from "../assets/images/back90.jpeg";
-import Mapelimage from "../assets/images/mapel.png"; 
-import Aktiv from "../assets/images/aktive.png"
+import Mapelimage from "../assets/images/mapel.png";
+import Aktiv from "../assets/images/aktive.png";
 
 const Home = ({ navigation }) => {
   const dataSiswa = [
-	{ gambar: (Animation12), text: "Daftar Eskul" },
-	{ gambar: (Mapelimage), text: "Mapel" },
-	{ gambar: (Aktiv), text: "Kegiatan " },
-];
+    { gambar: Animation12, text: "Siswa" },
+    { gambar: Mapelimage, text: "Mapel" },
+    { gambar: Aktiv, text: "Eskul" },
+  ];
 
   return (
     <>
@@ -31,17 +30,17 @@ const Home = ({ navigation }) => {
           </View>
 
           {dataSiswa.map((post) => {
-            return(
-            <View style={styles.containerextra}>
-              <Image source={post.gambar} style={styles.animation1} />
-              <TouchableOpacity
-                style={styles.wrapeskul}
-                onPress={() => navigation.navigate("eskul")}
-              >
-                <Text style={styles.eskul}>{post.text}</Text>
-              </TouchableOpacity>
-            </View>
-			)
+            return (
+              <View style={styles.containerextra}>
+                <Image source={post.gambar} style={styles.animation1} />
+                <TouchableOpacity
+                  style={styles.wrapeskul}
+                  onPress={() => navigation.navigate("eskul")}
+                >
+                  <Text style={styles.eskul}>{post.text}</Text>
+                </TouchableOpacity>
+              </View>
+            );
           })}
         </ImageBackground>
       </View>
