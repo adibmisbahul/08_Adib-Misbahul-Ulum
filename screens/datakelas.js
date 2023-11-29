@@ -12,6 +12,7 @@ import { DataTable } from "react-native-paper";
 import BckImage2 from "../assets/images/back90.jpeg";
 
 export default function Datakelas() {
+  
   const navigation = useNavigation();
 
   const Datasiswa = [
@@ -21,6 +22,10 @@ export default function Datakelas() {
     { nama: "Fahri", kelas: "XII RPL 1", Nis: "4312876" },
     { nama: "Rendra", kelas: "XII RPL 1", Nis: "4312876" },
     { nama: "Amar", kelas: "XII RPL 1", Nis: "4312876" },
+    { nama: "Arif", kelas: "XII RPL 1", Nis: "4312876" },
+    { nama: "Arif", kelas: "XII RPL 1", Nis: "4312876" },
+    { nama: "Arif", kelas: "XII RPL 1", Nis: "4312876" },
+    { nama: "Arif", kelas: "XII RPL 1", Nis: "4312876" },
     { nama: "Arif", kelas: "XII RPL 1", Nis: "4312876" },
   ];
 
@@ -45,6 +50,14 @@ export default function Datakelas() {
                 );
               })}
             </DataTable>
+          </View>
+          <View className="flex flex-row my-20 gap-11 ml-16"> 
+            <TouchableOpacity className="w-1/5 h-8 bg-purple-500 rounded-md">
+              <Text className="text-white mt-1 text-center">Update</Text>
+            </TouchableOpacity>
+            <TouchableOpacity className="w-1/5 h-8 bg-purple-500 rounded-md">
+              <Text className="text-white mt-1 text-center">Delete</Text>
+            </TouchableOpacity>
           </View>
         </ImageBackground>
       </View>
